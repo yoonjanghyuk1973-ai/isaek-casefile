@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>정답 확인 · CASE FILE 01</title>
+<style>
+:root{--bg:#0b0b0e;--card:#15151b;--line:#2a2a33;--accent:#ff6f0f;--ok:#3dd68c;--bad:#ff5c5c;--text:#f2f2f4;--muted:#9a9aa3}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:radial-gradient(1200px 600px at 10% -10%,#2a1508,transparent),var(--bg);color:var(--text);min-height:100vh}
+.wrap{max-width:520px;margin:0 auto;padding:24px 16px 60px}
+.badge{color:var(--accent);letter-spacing:2px;font-size:11px;font-weight:700}
+h1{font-size:24px;margin:8px 0 6px}
+.sub{color:var(--muted);font-size:13px;line-height:1.55;margin-bottom:18px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.q h2{font-size:14px;margin:0 0 10px;line-height:1.45}
+label{display:block;padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;cursor:pointer;font-size:13px;line-height:1.4;background:#101016}
+label:has(input:checked){border-color:var(--accent);background:#1c120c}
+input{margin-right:8px;accent-color:var(--accent)}
+button#go{width:100%;margin-top:16px;background:linear-gradient(90deg,#ff8a3d,var(--accent));border:0;color:#111;font-weight:800;font-size:15px;padding:14px;border-radius:12px;cursor:pointer}
+#out{margin-top:18px;padding:16px;border-radius:14px;display:none;border:1px solid var(--line);background:var(--card)}
+#out.show{display:block}
+.ok{color:var(--ok)}.bad{color:var(--bad)}
+.score{font-size:28px;font-weight:800;margin:6px 0 10px}
+.small{font-size:12px;color:var(--muted);line-height:1.5}
+.spoiler{margin-top:12px;padding:12px;background:#0e0e12;border-radius:10px;font-size:13px;line-height:1.55;display:none}
+.spoiler.open{display:block}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="badge">CASE FILE 01 · SEALED CHECK</div>
+<h1>정답 확인</h1>
+<p class="sub">질문지를 먼저 다 적었나요? 객관식 5문항 · <b>4개 이상</b>이면 사건 해결. 정답은 해시로만 비교합니다.</p>
+
+<div class="q" data-i="0"><h2>1. 박영길 씨를 죽인 사람은?</h2>
+<label><input type="radio" name="q0" value="A"> 박준혁 (장남)</label>
+<label><input type="radio" name="q0" value="B"> 김미숙 (요양보호사)</label>
+<label><input type="radio" name="q0" value="C"> 박하린 (손녀)</label>
+<label><input type="radio" name="q0" value="D"> 최만석 (골동품상)</label>
+</div>
+
+<div class="q" data-i="1"><h2>2. 살해 방법은?</h2>
+<label><input type="radio" name="q1" value="A"> 금고 속 약물로 음독 유도</label>
+<label><input type="radio" name="q1" value="B"> 쌍화탕에 수면제(졸피뎀)를 섞어 먹임</label>
+<label><input type="radio" name="q1" value="C"> 혈압약을 과다 복용시킴</label>
+<label><input type="radio" name="q1" value="D"> 질식으로 위장한 외상</label>
+</div>
+
+<div class="q" data-i="2"><h2>3. 새벽에 매물을 올리고 청자 화병을 '거래완료'로 바꾼 이유는?</h2>
+<label><input type="radio" name="q2" value="A"> 빚 상환용 현금을 급히 만들기 위해</label>
+<label><input type="radio" name="q2" value="B"> 요양비를 마련하려는 유족의 부탁</label>
+<label><input type="radio" name="q2" value="C"> 모조품을 없애고, 고인이 생전에 헐값에 판 것처럼 위장</label>
+<label><input type="radio" name="q2" value="D"> 계정 해킹 실험을 덮기 위해</label>
+</div>
+
+<div class="q" data-i="3"><h2>4. 범인을 특정하는 결정적 조합은? (2개)</h2>
+<label><input type="checkbox" name="q3" value="A"> 매물 사진 유리 반사(시계·체크) ↔ CCTV 인상착의</label>
+<label><input type="checkbox" name="q3" value="B"> 장남의 금고 지문만으로 충분</label>
+<label><input type="checkbox" name="q3" value="C"> 매물 매병 굽/목 ↔ 감정서 진품 특징 불일치</label>
+<label><input type="checkbox" name="q3" value="D"> 손녀의 부산 MT 문자만으로 충분</label>
+</div>
+
+<div class="q" data-i="4"><h2>5. 장남·요양보호사가 범인이 아닌 핵심 근거는?</h2>
+<label><input type="radio" name="q4" value="A"> 둘 다 고인을 좋아했다는 진술</label>
+<label><input type="radio" name="q4" value="B"> 19:48 고인 생존 문자(+통화) / 23:40 대화동 GPS 출결</label>
+<label><input type="radio" name="q4" value="C"> 검안에 외상이 없었다는 점만</label>
+<label><input type="radio" name="q4" value="D"> 매너온도가 41.2℃라서</label>
+</div>
+
+<button id="go">채점하기</button>
+<div id="out"></div>
+</div>
+<script>
+const H=[
+"3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43",
+"df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c",
+"6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d",
+"472e73d796e20aa8ff9059e6316f218e0322548f661ec4dc267507ed66317404",
+"df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c"
+];
+async function sha(s){const b=new TextEncoder().encode(s);const d=await crypto.subtle.digest('SHA-256',b);return [...new Uint8Array(d)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+document.getElementById('go').onclick=async()=>{
+  const vals=[];
+  for(let i=0;i<5;i++){
+    if(i===3){
+      const checked=[...document.querySelectorAll('input[name="q3"]:checked')].map(x=>x.value).sort().join('');
+      vals.push(checked);
+    } else {
+      const el=document.querySelector(`input[name="q${i}"]:checked`);
+      vals.push(el?el.value:'');
+    }
+  }
+  let score=0; const marks=[];
+  for(let i=0;i<5;i++){
+    const ok = vals[i] && (await sha(vals[i]))===H[i];
+    if(ok) score++;
+    marks.push(ok);
+  }
+  const out=document.getElementById('out');
+  out.className='show';
+  const solved=score>=4;
+  out.innerHTML=`<div class="score ${solved?'ok':'bad'}">${score} / 5</div>
+  <div>${marks.map((m,i)=>`<div>Q${i+1}: <span class="${m?'ok':'bad'}">${m?'정답':'오답'}</span></div>`).join('')}</div>
+  <p style="margin-top:12px;font-weight:700">${solved?'사건 해결. 봉투 C(전체 해설)를 열어도 좋습니다.':'아직 미해결. 힌트 단계를 보거나 타임라인표를 다시 채워 보세요.'}</p>
+  <p class="small">정답 문구는 이 페이지 소스에 평문으로 없습니다. 종이 봉투 A→B→C도 동일 기준입니다.</p>
+  ${solved?`<button id="openC" style="margin-top:10px;width:100%;padding:12px;border-radius:10px;border:1px solid #2a2a33;background:#101016;color:#eee">봉투 C 요약 열기 (스포)</button>
+  <div class="spoiler" id="sp">범인 최만석. 쌍화탕+졸피뎀. 모조 매병 은폐·생전 판매 위장. 교차 단서: 유리 반사↔CCTV, 굽/목↔감정서, 말투·기기·접속 위치.</div>`:''}`;
+  const b=document.getElementById('openC');
+  if(b) b.onclick=()=>document.getElementById('sp').classList.add('open');
+};
+</script>
+</body></html>
